@@ -15,7 +15,7 @@
 		"test:unit": "vitest",
 		"stories": "histoire dev",
 		"stories:build": "histoire build",
-		"stories:preview": "histoire preview:"
+		"stories:preview": "histoire preview"
 	},
 	"devDependencies": {
 		"@histoire/plugin-svelte": "^0.17.0",
