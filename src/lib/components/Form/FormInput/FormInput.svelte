@@ -1,11 +1,11 @@
 <script lang="ts">
-	import InfoCircle from '$lib/components/icons/InfoCircle.svelte';
+	import InfoCircle from "$lib/components/icons/InfoCircle.svelte";
 
 	export let id: string;
-	export let type: 'text' | 'password';
+	export let type: "text" | "password";
 	export let label: string;
 	export let value: string;
-	export let error: string | undefined;
+	export let error: string | undefined = undefined;
 
 	function handleInput(event: Event) {
 		const target = event.target as HTMLInputElement;
@@ -15,10 +15,18 @@
 
 <article>
 	<label for={`input-${id}`}>{label}</label>
-	<input class={error ? 'error' : ''} {type} {value} on:input={handleInput} />
+	<input
+		id={`input-${id}`}
+		class={error ? "error" : ""}
+		type={type}
+		value={value}
+		on:input={handleInput}
+		aria-invalid={!!error}
+		aria-errormessage="validation-area"
+	/>
 
 	{#if error}
-		<div class="validation-area">
+		<div id="validation-area" role="alert">
 			<InfoCircle color="red" width={22} height={22}/>
 			<span class="validation-message">{error}</span>
 		</div>
@@ -52,13 +60,12 @@
 	input.error {
 		border-color: var(--error-colour);
 	}
-	.validation-area {
+	#validation-area {
 		display: flex;
 		align-items: center;
 		column-gap: 4px;
 	}
 	.validation-message {
-		width: 100%;
 		color: var(--error-colour);
 		font-size: var(--font-size-small);
 		line-height: var(--font-size-small);
