@@ -14,20 +14,18 @@
 
 <div class="histoire-story">
 	<svelte:component this={Hst.Story} title="Form/Input">
-		<svelte:component this={Hst.Variant} title="Default">
-			<FormInput id={id} type={type} label={label} value={value} error={error} />
+		<FormInput id={id} type={type} label={label} value={value} error={error} />
 
-			<svelte:fragment slot="controls">
-				<svelte:component
-					this={Hst.Select}
-					title="type"
-					bind:value={type}
-					options={["text", "password"]}
-				/>
-				<svelte:component this={Hst.Text} title="label" bind:value={label} />
-				<svelte:component this={Hst.Text} title="value" bind:value={value} />
-				<svelte:component this={Hst.Text} title="error" bind:value={error} />
-			</svelte:fragment>
-		</svelte:component>
+		<svelte:fragment slot="controls">
+			<svelte:component
+				this={Hst.Select}
+				title="type"
+				bind:value={type}
+				options={["text", "password"]}
+			/>
+			<svelte:component this={Hst.Text} title="label" bind:value={label} />
+			<svelte:component this={Hst.Text} title="value" bind:value={value} />
+			<svelte:component this={Hst.Text} title="error" bind:value={error} />
+		</svelte:fragment>
 	</svelte:component>
 </div>
