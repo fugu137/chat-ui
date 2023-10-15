@@ -5,11 +5,13 @@
 
 	export let Hst: Hst;
 
-	let id: ComponentProps<FormInput>["id"] = "input";
-	let label: ComponentProps<FormInput>["label"] = "Label:";
-	let type: ComponentProps<FormInput>["type"] = "text";
-	let value: ComponentProps<FormInput>["value"] = "First name";
-	let error: ComponentProps<FormInput>["error"] = "Enter a valid username";
+	type Props = ComponentProps<FormInput>;
+
+	let id: Props["id"] = "input";
+	let label: Props["label"] = "Label:";
+	let type: Props["type"] = "text";
+	let value: Props["value"] = "First name";
+	let error: Props["error"];
 </script>
 
 <div class="histoire-story">
