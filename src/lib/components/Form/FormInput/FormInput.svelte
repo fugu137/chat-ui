@@ -43,7 +43,7 @@
 	article {
 		display: flex;
 		flex-direction: column;
-		row-gap: 8px;
+		row-gap: 10px;
 	}
 	label {
 		display: block;
