@@ -1,11 +1,11 @@
 <script lang="ts">
-	import FormInput from "$lib/components/Form/FormInput/FormInput.svelte";
+	import Input from "$lib/components/Input/Input.svelte";
 	import type { Hst } from "@histoire/plugin-svelte";
 	import type { ComponentProps } from "svelte";
 
 	export let Hst: Hst;
 
-	type Props = ComponentProps<FormInput>;
+	type Props = ComponentProps<Input>;
 
 	let id: Props["id"] = "input";
 	let label: Props["label"] = "Label:";
@@ -15,8 +15,8 @@
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Form/Input/Input">
-		<FormInput id={id} type={type} label={label} value={value} error={error} />
+	<svelte:component this={Hst.Story} title="Input/Input">
+		<Input id={id} type={type} label={label} value={value} error={error} />
 
 		<svelte:fragment slot="controls">
 			<svelte:component

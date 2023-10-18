@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom/vitest";
 import { render, fireEvent, screen } from "@testing-library/svelte";
 import { describe, expect, it } from "vitest";
-import FormInput from "./FormInput.svelte";
+import FormInput from "./Input.svelte";
 
 describe("FormInput", () => {
 	it("should render an input with the correct label", () => {
