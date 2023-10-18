@@ -7,7 +7,7 @@
 
 	type Props = ComponentProps<Input>;
 
-	let id: Props["id"] = "input";
+	let name: Props["name"] = "input";
 	let label: Props["label"] = "Label:";
 	let type: Props["type"] = "text";
 	let value: Props["value"] = "First name";
@@ -16,7 +16,7 @@
 
 <div class="histoire-story">
 	<svelte:component this={Hst.Story} title="Input/Input">
-		<Input id={id} type={type} label={label} value={value} error={error} />
+		<Input name={name} type={type} label={label} value={value} error={error} />
 
 		<svelte:fragment slot="controls">
 			<svelte:component

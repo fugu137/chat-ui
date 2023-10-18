@@ -5,7 +5,7 @@ import FormInput from "./Input.svelte";
 
 describe("FormInput", () => {
 	it("should render an input with the correct label", () => {
-		render(FormInput, { id: "1", type: "text", label: "A label", value: "" });
+		render(FormInput, { name: "1", type: "text", label: "A label", value: "" });
 
 		const input = screen.getByRole("textbox");
 
@@ -14,7 +14,7 @@ describe("FormInput", () => {
 	});
 
 	it("should display user-entered text", () => {
-		render(FormInput, { id: "1", type: "text", label: "A label", value: "" });
+		render(FormInput, { name: "1", type: "text", label: "A label", value: "" });
 
 		const input = screen.getByRole("textbox");
 
@@ -24,7 +24,7 @@ describe("FormInput", () => {
 	});
 
 	it("should have type='text' when type prop is set to 'text'", () => {
-		render(FormInput, { id: "1", type: "text", label: "A label", value: "" });
+		render(FormInput, { name: "1", type: "text", label: "A label", value: "" });
 
 		const input = screen.getByLabelText("A label");
 
@@ -32,7 +32,7 @@ describe("FormInput", () => {
 	});
 
 	it("should have type='password' when type prop is set to 'password", () => {
-		render(FormInput, { id: "1", type: "password", label: "A label", value: "" });
+		render(FormInput, { name: "1", type: "password", label: "A label", value: "" });
 
 		const input = screen.getByLabelText("A label");
 
@@ -41,7 +41,7 @@ describe("FormInput", () => {
 
 	it("should display the provided error message", () => {
 		render(FormInput, {
-			id: "1",
+			name: "1",
 			type: "text",
 			label: "A label",
 			value: "",

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ValidationIcon from "$lib/components/Icon/ValidationIcon.svelte";
 
-	export let id: string;
+	export let name: string;
 	export let type: "text" | "password";
 	export let label: string;
 	export let value: string;
@@ -14,9 +14,10 @@
 </script>
 
 <article>
-	<label for={`input-${id}`}>{label}</label>
+	<label for={`input-${name}`}>{label}</label>
 	<input
-		id={`input-${id}`}
+		id={`input-${name}`}
+		name={name}
 		class={error ? "error" : ""}
 		type={type}
 		value={value}
@@ -38,7 +39,7 @@
 <style>
 	* {
 		--error-colour: red;
-		--font-size-small: 0.93em;
+		--font-size-small: 0.95em;
 		font-size: 1em;
 		box-shadow: none;
 	}
