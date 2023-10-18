@@ -1,14 +1,13 @@
 <script lang="ts">
 	import type { Hst } from "@histoire/plugin-svelte";
-	import type { ComponentProps } from "svelte";
-    import Form from "./LoginForm.svelte";
+    import LoginForm from "./LoginForm.svelte";
 
 	export let Hst: Hst;
 </script>
 
 <div class="histoire-story">
 	<svelte:component this={Hst.Story} title="Login Form/Login Form">
-		<Form />
+		<LoginForm />
 
 		<svelte:fragment slot="controls">
 		</svelte:fragment>

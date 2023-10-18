@@ -1,11 +1,11 @@
 import "@testing-library/jest-dom/vitest";
 import { render, fireEvent, screen } from "@testing-library/svelte";
 import { describe, expect, it } from "vitest";
-import FormInput from "./Input.svelte";
+import Input from "./Input.svelte";
 
-describe("FormInput", () => {
+describe("Input", () => {
 	it("should render an input with the correct label", () => {
-		render(FormInput, { name: "1", type: "text", label: "A label", value: "" });
+		render(Input, { name: "1", type: "text", label: "A label", value: "" });
 
 		const input = screen.getByRole("textbox");
 
@@ -14,7 +14,7 @@ describe("FormInput", () => {
 	});
 
 	it("should display user-entered text", () => {
-		render(FormInput, { name: "1", type: "text", label: "A label", value: "" });
+		render(Input, { name: "1", type: "text", label: "A label", value: "" });
 
 		const input = screen.getByRole("textbox");
 
@@ -24,7 +24,7 @@ describe("FormInput", () => {
 	});
 
 	it("should have type='text' when type prop is set to 'text'", () => {
-		render(FormInput, { name: "1", type: "text", label: "A label", value: "" });
+		render(Input, { name: "1", type: "text", label: "A label", value: "" });
 
 		const input = screen.getByLabelText("A label");
 
@@ -32,7 +32,7 @@ describe("FormInput", () => {
 	});
 
 	it("should have type='password' when type prop is set to 'password", () => {
-		render(FormInput, { name: "1", type: "password", label: "A label", value: "" });
+		render(Input, { name: "1", type: "password", label: "A label", value: "" });
 
 		const input = screen.getByLabelText("A label");
 
@@ -40,7 +40,7 @@ describe("FormInput", () => {
 	});
 
 	it("should display the provided error message", () => {
-		render(FormInput, {
+		render(Input, {
 			name: "1",
 			type: "text",
 			label: "A label",
