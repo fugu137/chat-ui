@@ -8,7 +8,7 @@ export default defineConfig({
 		title: "Chat UI - Preview",
 		favicon: "chat-solid.png",
 		logo: {
-			light: "/src/lib/images/chat-solid.png",
+			light: "/src/lib/images/logo-solid.svg",
 			dark: "/src/lib/images/chat-outline.png"
 		},
 		colors: {
