@@ -36,7 +36,7 @@
 <style>
 	* {
 		--error-colour: red;
-		--font-size-small: 0.9em;
+		--font-size-small: 0.93em;
 		font-size: 1em;
 		box-shadow: none;
 	}

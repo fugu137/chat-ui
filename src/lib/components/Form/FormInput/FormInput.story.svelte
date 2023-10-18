@@ -15,7 +15,7 @@
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Form/Input">
+	<svelte:component this={Hst.Story} title="Form/Input/Input">
 		<FormInput id={id} type={type} label={label} value={value} error={error} />
 
 		<svelte:fragment slot="controls">
