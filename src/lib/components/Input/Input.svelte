@@ -26,7 +26,7 @@
 		aria-errormessage="validation-message"
 	/>
 
-	<ValidationBar id="validation-message" error={error} />
+	<ValidationBar ariaId="validation-message" error={error} />
 </article>
 
 <style>

@@ -16,6 +16,7 @@
 	--error-colour: red;
 
 	--width-regular: 440px;
+	--icon-height-small: 22px;
 
 	font-size: var(--font-size-medium);
 	box-sizing: border-box;

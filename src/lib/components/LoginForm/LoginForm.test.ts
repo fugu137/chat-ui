@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/svelte";
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import LoginForm from "./LoginForm.svelte";
-import type { LoginFormProps } from "./types";
 
 describe("Login Form", () => {
 	afterEach(() => {
@@ -59,24 +58,50 @@ describe("Login Form", () => {
 		expect(loginButton).toBeInTheDocument();
 	});
 
-	it("should call 'onSubmit' with the form values when the 'Log in' button is clicked", async () => {
-		const handleSubmitMock = vi.fn() as LoginFormProps["onSubmit"];
+	describe("Submission and Validation", () => {
+		it("should call 'onSubmit' with the form values when the 'Log in' button is clicked", async () => {
+			const handleSubmitMock = vi.fn();
 
-		render(LoginForm, { onSubmit: handleSubmitMock });
+			render(LoginForm, { onSubmit: handleSubmitMock });
 
-		const usernameInput = screen.getByLabelText("Username");
-		const passwordInput = screen.getByLabelText("Password");
+			const usernameInput = screen.getByLabelText("Username");
+			const passwordInput = screen.getByLabelText("Password");
 
-		await fireEvent.input(usernameInput, { target: { value: "Freddie" } });
-		await fireEvent.input(passwordInput, { target: { value: "Pa$sword123" } });
+			await fireEvent.input(usernameInput, { target: { value: "Freddie" } });
+			await fireEvent.input(passwordInput, { target: { value: "Pa$sword123" } });
 
-		const loginButton = screen.getByRole("button", { name: "Log in" });
-		await fireEvent.click(loginButton);
+			const loginButton = screen.getByRole("button", { name: "Log in" });
+			await fireEvent.click(loginButton);
 
-		expect(handleSubmitMock).toHaveBeenCalledOnce();
-		expect(handleSubmitMock).toHaveBeenCalledWith({
-			username: "Freddie",
-			password: "Pa$sword123"
+			expect(handleSubmitMock).toHaveBeenCalledOnce();
+			expect(handleSubmitMock).toHaveBeenCalledWith({
+				username: "Freddie",
+				password: "Pa$sword123"
+			});
+		});
+
+		it("should display an error message if one is passed in", async () => {
+			render(LoginForm, {
+				onSubmit: vi.fn(),
+				error: "Please enter a valid username and password"
+			});
+
+			const errorMessage = screen.getByRole("alert");
+
+			expect(errorMessage).toHaveTextContent(
+				"Please enter a valid username and password"
+			);
+		});
+
+		it("should mark the form as invalid if an error message is passed in", async () => {
+			render(LoginForm, {
+				onSubmit: vi.fn(),
+				error: "Please enter a valid username and password"
+			});
+
+			const form = screen.getByRole("form");
+
+			expect(form).toBeInvalid();
 		});
 	});
 });

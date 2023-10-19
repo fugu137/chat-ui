@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Button from "../Button/Button.svelte";
 	import Input from "../Input/Input.svelte";
+	import ValidationBar from "../ValidationBar/ValidationBar.svelte";
 	import type { LoginFormValues } from "./types";
 
 	export let onSubmit: (formValues: LoginFormValues) => void;
+	export let error: string | undefined = undefined;
 
 	let username: string = "";
 	let password: string = "";
@@ -18,14 +20,14 @@
 	}
 </script>
 
-<form name="login-form">
+<!-- svelte-ignore a11y-role-supports-aria-props -->
+<form name="login-form" aria-invalid={!!error}>
 	<Input name="username" label="Username" type="text" bind:value={username} />
 	<Input name="password" label="Password" type="password" bind:value={password} />
 
 	<div class="button-bar">
+		<ValidationBar ariaId="validation-message" error={error}/>
 		<Button text="Log in" onClick={handleSubmit} />
-		<div class="validation-area">
-		</div>
 	</div>
 </form>
 
@@ -35,11 +37,10 @@
 	}
 	.button-bar {
 		display: flex;
-		justify-content: flex-start;
+		align-items: center;
+		justify-content: space-between;
 		column-gap: 16px;
+		width: 100%;
 		margin-top: 18px;
-	}
-	.validation-area {
-		height: 22px;
 	}
 </style>

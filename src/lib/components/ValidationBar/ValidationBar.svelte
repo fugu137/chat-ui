@@ -1,22 +1,22 @@
 <script lang="ts">
 	import ValidationIcon from "../Icon/ValidationIcon.svelte";
 
-    export let id: string;
-    export let error: string | undefined;
+	export let ariaId: string;
+	export let error: string | undefined = undefined;
 </script>
 
 <div class="validation-area">
-    {#if error}
-        <div id={id} class="validation-message" role="alert">
-            <ValidationIcon color="var(--error-colour)" width={22} height={22} />
-            <span class="validation-text">{error}</span>
-        </div>
-    {/if}
+	{#if error}
+		<div id={ariaId} class="validation-message" role="alert">
+			<ValidationIcon colour="var(--error-colour)" />
+			<span class="validation-text">{error}</span>
+		</div>
+	{/if}
 </div>
 
 <style>
-    .validation-area {
-		height: 22px;
+	.validation-area {
+		height: var(--icon-height-small);
 	}
 	.validation-message {
 		display: flex;
@@ -27,5 +27,6 @@
 		color: var(--error-colour);
 		font-size: var(--font-size-small);
 		line-height: var(--font-size-small);
+		padding-bottom: 1px;
 	}
 </style>
