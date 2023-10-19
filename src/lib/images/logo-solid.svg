@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="192"
+   width="196"
    height="64"
-   viewBox="0 0 50.799999 16.933333"
+   viewBox="0 0 51.858332 16.933333"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="4.4142857"
-     inkscape:cx="66.375405"
+     inkscape:cx="66.601942"
      inkscape:cy="29.33657"
      inkscape:window-width="2560"
      inkscape:window-height="1371"
@@ -62,26 +62,26 @@
        style="white-space:pre;shape-inside:url(#rect2);display:inline;fill:#000000" /><path
        fill="#1c71d8"
        fill-rule="evenodd"
-       d="m 4.2768503,4.0907746 a 38.354734,38.527936 0 0 1 6.1418207,0.03059 l 1.230791,0.105124 a 2.0217435,2.0308732 0 0 1 1.826849,1.7154999 l 0.07734,0.5096228 a 15.671167,15.741935 0 0 1 -0.07281,5.2066837 1.7767984,1.784822 0 0 1 -1.747979,1.464881 H 4.9259884 c -0.1569942,0 -0.310909,0.03882 -0.4489396,0.113508 L 1.511173,14.837816 A 0.56875752,0.57132591 0 0 1 0.67320227,14.334267 V 7.8462916 A 3.7386329,3.7555158 0 0 1 4.130489,4.1022012 Z m -0.00156,3.7684657 a 0.94792981,0.95221045 0 1 0 0,1.9044209 0.94792981,0.95221045 0 0 0 0,-1.9044209 z m 3.0333725,0 a 0.94792981,0.95221045 0 1 0 0,1.9044209 0.94792981,0.95221045 0 0 0 0,-1.9044209 z m 2.0854491,0.9522122 a 0.94792933,0.95220997 0 1 1 1.8958551,0 0.94792933,0.95220997 0 0 1 -1.8958551,0 z"
+       d="m 3.6920925,4.9206429 a 35.320668,35.249766 0 0 1 5.6559692,0.027987 l 1.1334283,0.096179 a 1.8618127,1.8580753 0 0 1 1.682335,1.5695357 l 0.07123,0.4662613 a 14.431492,14.402525 0 0 1 -0.06706,4.7636691 1.636244,1.6329596 0 0 1 -1.609704,1.340241 H 4.2898802 c -0.1445751,0 -0.2863144,0.03552 -0.413426,0.103852 L 1.1451951,14.753267 A 0.52376573,0.52271435 0 0 1 0.37351241,14.292562 V 8.3566197 A 3.4428868,3.4359756 0 0 1 3.5573091,4.9310972 Z m -0.00144,3.4478236 a 0.87294359,0.87119125 0 1 0 0,1.7423825 0.87294359,0.87119125 0 0 0 0,-1.7423825 z m 2.7934163,0 a 0.87294359,0.87119125 0 1 0 0,1.7423825 0.87294359,0.87119125 0 0 0 0,-1.7423825 z m 1.9204788,0.8711927 a 0.872943,0.87119067 0 1 1 1.7458834,0 0.872943,0.87119067 0 0 1 -1.7458834,0 z"
        clip-rule="evenodd"
        id="path1"
-       style="stroke-width:0.760056" /><text
+       style="stroke-width:0.697657" /><text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text5"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.4002px;font-family:'Noto Sans Sinhala';-inkscape-font-specification:'Noto Sans Sinhala, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;white-space:pre;shape-inside:url(#rect5);display:inline;fill:#4d4d4d;fill-opacity:1" /><text
        xml:space="preserve"
-       style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6322px;font-family:Waree;-inkscape-font-specification:'Waree, Bold Oblique';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.454361"
-       x="16.637819"
-       y="13.203348"
+       style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.6894px;font-family:Waree;-inkscape-font-specification:'Waree, Bold Oblique';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.499538"
+       x="16.03384"
+       y="13.10632"
        id="text6"
-       transform="scale(1.036295,0.96497619)"><tspan
+       transform="scale(1.012579,0.98757727)"><tspan
          sodipodi:role="line"
          id="tspan6"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6322px;font-family:Carlito;-inkscape-font-specification:'Carlito, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#1c71d8;fill-opacity:1;stroke-width:0.454361"
-         x="16.637819"
-         y="13.203348"><tspan
-           style="font-style:italic;stroke-width:0.454361"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.6894px;font-family:Carlito;-inkscape-font-specification:'Carlito, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#1c71d8;fill-opacity:1;stroke-width:0.499538"
+         x="16.03384"
+         y="13.10632"><tspan
+           style="font-style:italic;stroke-width:0.499538"
            id="tspan13">Jiejie</tspan></tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.1913px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#1c71d8;fill-opacity:1;stroke-width:0.264583"
@@ -94,16 +94,16 @@
          x="54.874893"
          y="10.388626" /></text><text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.82178px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.111836"
-       x="41.553268"
-       y="13.03796"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.20177px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.122955"
+       x="43.328167"
+       y="12.983368"
        id="text8"
-       transform="scale(0.99301592,1.0070332)"><tspan
+       transform="scale(0.97029038,1.0306193)"><tspan
          sodipodi:role="line"
          id="tspan8"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.82178px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;stroke-width:0.111836"
-         x="41.553268"
-         y="13.03796">Chat</tspan></text><text
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.20177px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;stroke-width:0.122955"
+         x="43.328167"
+         y="12.983368">Chat</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:9.04158px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
        x="9.0133352"

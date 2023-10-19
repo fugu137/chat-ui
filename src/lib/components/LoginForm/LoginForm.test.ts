@@ -1,10 +1,15 @@
 import { fireEvent, render, screen } from "@testing-library/svelte";
-import { describe, it, expect } from "vitest";
-import Form from "./LoginForm.svelte";
+import { describe, it, expect, vi, afterEach } from "vitest";
+import LoginForm from "./LoginForm.svelte";
+import type { LoginFormProps } from "./types";
 
-describe("Form", () => {
+describe("Login Form", () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
 	it("should display a form", () => {
-		render(Form);
+		render(LoginForm, { onSubmit: vi.fn() });
 
 		const form = screen.getByRole("form");
 
@@ -12,7 +17,7 @@ describe("Form", () => {
 	});
 
 	it("should display a text input labelled 'Username'", () => {
-		render(Form);
+		render(LoginForm, { onSubmit: vi.fn() });
 
 		const usernameInput = screen.getByRole("textbox");
 
@@ -21,7 +26,7 @@ describe("Form", () => {
 	});
 
 	it("should display a password input labelled 'Password'", () => {
-		render(Form);
+		render(LoginForm, { onSubmit: vi.fn() });
 
 		const passwordInput = screen.getByLabelText("Password");
 
@@ -30,13 +35,13 @@ describe("Form", () => {
 	});
 
 	it("should allow users to enter a username and password", async () => {
-		render(Form);
+		render(LoginForm, { onSubmit: vi.fn() });
 
 		const usernameInput = screen.getByLabelText("Username");
 		const passwordInput = screen.getByLabelText("Password");
 
-		await fireEvent.change(usernameInput, { target: { value: "Freddie" } });
-		await fireEvent.change(passwordInput, { target: { value: "Pa$sword123" } });
+		await fireEvent.input(usernameInput, { target: { value: "Freddie" } });
+		await fireEvent.input(passwordInput, { target: { value: "Pa$sword123" } });
 
 		const form = screen.getByRole("form");
 
@@ -47,10 +52,31 @@ describe("Form", () => {
 	});
 
 	it("should display a 'Submit' button", () => {
-		render(Form);
+		render(LoginForm, { onSubmit: vi.fn() });
 
-		const submitButton = screen.getByRole("button", { name: "Submit"});
+		const submitButton = screen.getByRole("button", { name: "Submit" });
 
 		expect(submitButton).toBeInTheDocument();
+	});
+
+	it("should call 'onSubmit' with the form values when the 'Submit' button is clicked", async () => {
+		const handleSubmitMock = vi.fn() as LoginFormProps["onSubmit"];
+
+		render(LoginForm, { onSubmit: handleSubmitMock });
+
+		const usernameInput = screen.getByLabelText("Username");
+		const passwordInput = screen.getByLabelText("Password");
+
+		await fireEvent.input(usernameInput, { target: { value: "Freddie" } });
+		await fireEvent.input(passwordInput, { target: { value: "Pa$sword123" } });
+
+		const submitButton = screen.getByRole("button", { name: "Submit" });
+		await fireEvent.click(submitButton);
+
+		expect(handleSubmitMock).toHaveBeenCalledOnce();
+		expect(handleSubmitMock).toHaveBeenCalledWith({
+			username: "Freddie",
+			password: "Pa$sword123"
+		});
 	});
 });
