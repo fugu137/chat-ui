@@ -10,7 +10,7 @@
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Validation/ValidationBar">
+	<svelte:component this={Hst.Story} title="ValidationBar">
 		<ValidationBar ariaId={ariaId} error={error}/>
 
 		<svelte:fragment slot="controls">

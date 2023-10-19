@@ -58,6 +58,22 @@ describe("Login Form", () => {
 		expect(loginButton).toBeInTheDocument();
 	});
 
+	it("should set the size of the 'Log in' button based on the 'buttonSize' prop", () => {
+		render(LoginForm, { onSubmit: vi.fn(), buttonSize: "small" });
+
+		const loginButton = screen.getByRole("button", { name: "Log in" });
+
+		expect(loginButton).toHaveClass("small")
+	});
+
+	it("should set the variant of the 'Log in' button based on the 'buttonVariant' prop", () => {
+		render(LoginForm, { onSubmit: vi.fn(), buttonVariant: "secondary" });
+
+		const loginButton = screen.getByRole("button", { name: "Log in" });
+
+		expect(loginButton).toHaveClass("secondary")
+	});
+
 	describe("Submission and Validation", () => {
 		it("should call 'onSubmit' with the form values when the 'Log in' button is clicked", async () => {
 			const handleSubmitMock = vi.fn();

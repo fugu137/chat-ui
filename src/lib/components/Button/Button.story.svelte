@@ -12,7 +12,7 @@
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Button/Button">
+	<svelte:component this={Hst.Story} title="Button">
 		<Button
 			text={text}
 			variant={variant}

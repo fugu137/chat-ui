@@ -1,4 +1,0 @@
-import type { ComponentProps } from "svelte";
-import type LoginForm from "./LoginForm.svelte";
-
-export type LoginFormProps = ComponentProps<LoginForm>;

@@ -7,14 +7,33 @@
 	export let Hst: Hst;
 
 	let error: LoginFormProps["error"];
+	let buttonVariant: LoginFormProps["buttonVariant"] = "primary";
+	let buttonSize: LoginFormProps["buttonSize"] = "regular";
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Login Form/Login Form">
-		<LoginForm error={error} onSubmit={(formValues) => logEvent("Submit", formValues)} />
+	<svelte:component this={Hst.Story} title="Login Form">
+		<LoginForm
+			error={error}
+			buttonSize={buttonSize}
+			buttonVariant={buttonVariant}
+			onSubmit={(formValues) => logEvent("Submit", formValues)}
+		/>
 
 		<svelte:fragment slot="controls">
 			<svelte:component this={Hst.Text} title="error" bind:value={error} />
+			<svelte:component
+				this={Hst.Select}
+				title="buttonVariant"
+				bind:value={buttonVariant}
+				options={["primary", "secondary"]}
+			/>
+			<svelte:component
+				this={Hst.Select}
+				title="buttonSize"
+				bind:value={buttonSize}
+				options={["small", "regular", "wide"]}
+			/>
 		</svelte:fragment>
 	</svelte:component>
 </div>

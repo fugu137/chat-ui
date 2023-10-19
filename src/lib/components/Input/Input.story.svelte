@@ -13,7 +13,7 @@
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Input/Input">
+	<svelte:component this={Hst.Story} title="Input">
 		<Input name={name} type={type} label={label} value={value} error={error} />
 
 		<svelte:fragment slot="controls">
