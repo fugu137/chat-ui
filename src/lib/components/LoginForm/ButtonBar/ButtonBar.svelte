@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { ButtonSize, ButtonVariant } from "../Button/types";
-	import Button from "../Button/Button.svelte";
-	import ValidationArea from "../ValidationArea/ValidationArea.svelte";
+	import type { ButtonSize, ButtonVariant } from "../../Button/types";
+	import Button from "../../Button/Button.svelte";
+	import ValidationArea from "../../ValidationArea/ValidationArea.svelte";
 
 	export let error: string | undefined = undefined;
 	export let buttonText: string;
@@ -10,7 +10,7 @@
 	export let onButtonClick: (event: MouseEvent) => void;
 </script>
 
-<div class={`button-bar ${buttonSize}`}>
+<div class={`form-submit ${buttonSize}`}>
 	<ValidationArea ariaId="validation-message" error={error} />
 	<Button
 		text={buttonText}
@@ -21,15 +21,17 @@
 </div>
 
 <style>
-	.button-bar {
+	.form-submit {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 16px;
+		gap: 12px;
 		width: var(--width-regular);
-		margin-top: 16px;
+		margin-top: 12px;
+		padding-left: 8px;
 	}
-	.button-bar.wide {
+	.form-submit.wide {
 		flex-direction: column;
+		padding-left: 0;
 	}
 </style>

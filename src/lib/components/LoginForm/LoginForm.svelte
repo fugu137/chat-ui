@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FormSubmit from "../FormSubmit/FormSubmit.svelte";
+	import ButtonBar from "./ButtonBar/ButtonBar.svelte";
 	import type { ButtonSize, ButtonVariant } from "../Button/types";
 	import Input from "../Input/Input.svelte";
 	import type { LoginFormValues } from "./types";
@@ -27,7 +27,7 @@
 	<Input name="username" label="Username" type="text" bind:value={username} />
 	<Input name="password" label="Password" type="password" bind:value={password} />
 
-	<FormSubmit
+	<ButtonBar
 		buttonText="Log in"
 		buttonSize={buttonSize}
 		buttonVariant={buttonVariant}

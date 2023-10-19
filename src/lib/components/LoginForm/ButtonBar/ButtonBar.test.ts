@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/svelte";
 import { describe, it, expect, vi } from "vitest";
-import FormSubmit from "./FormSubmit.svelte";
+import ButtonBar from "./ButtonBar.svelte";
 
 describe("Submit Button", () => {
 	it("should display a button with the provided configuration", () => {
-		render(FormSubmit, { buttonText: "Button text", buttonSize: "small", buttonVariant: "secondary", onButtonClick: vi.fn() });
+		render(ButtonBar, { buttonText: "Button text", buttonSize: "small", buttonVariant: "secondary", onButtonClick: vi.fn() });
 
         const button = screen.getByRole("button", { name: "Button text"});
 
@@ -14,7 +14,7 @@ describe("Submit Button", () => {
 	});
 
     it("should display the passed in error message", () => {
-		render(FormSubmit, { buttonText: "Button text", error: "A custom error message", onButtonClick: vi.fn() });
+		render(ButtonBar, { buttonText: "Button text", error: "A custom error message", onButtonClick: vi.fn() });
     
         const errorMessage = screen.getByRole("alert");
 

@@ -1,19 +1,19 @@
 <script lang="ts">
 	import type { Hst } from "@histoire/plugin-svelte";
-	import type { FormSubmitProps } from "./types";
-    import FormSubmit from "./FormSubmit.svelte";
+	import type {  ButtonBarProps } from "./types";
+    import FormSubmit from "./ButtonBar.svelte";
 	import { logEvent } from "histoire/client";
 
 	export let Hst: Hst;
 
-    let buttonText: FormSubmitProps["buttonText"] = "Submit";
-    let buttonVariant: FormSubmitProps["buttonVariant"] = "primary";
-    let buttonSize: FormSubmitProps["buttonSize"] = "regular";
-    let error: FormSubmitProps["error"];
+    let buttonText: ButtonBarProps["buttonText"] = "Submit";
+    let buttonVariant: ButtonBarProps["buttonVariant"] = "primary";
+    let buttonSize: ButtonBarProps["buttonSize"] = "regular";
+    let error: ButtonBarProps["error"];
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Login Form/Subcomponents/Form Submit">
+	<svelte:component this={Hst.Story} title="Login Form/Subcomponents/Button Bar">
 		<FormSubmit 
             buttonText={buttonText}
             buttonVariant={buttonVariant}
