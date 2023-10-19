@@ -1,9 +1,13 @@
 import "@testing-library/jest-dom/vitest";
 import { render, fireEvent, screen } from "@testing-library/svelte";
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi, afterEach } from "vitest";
 import Button from "./Button.svelte"
 
 describe("Button", () => {
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
 	it("should render a button with the correct text", () => {
 		render(Button, { text: "Button text", onClick: vi.fn() });
 
