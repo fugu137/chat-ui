@@ -23,7 +23,7 @@
 	<Input name="password" label="Password" type="password" bind:value={password} />
 
 	<div class="button-bar">
-		<Button text="Submit" size="large" onClick={handleSubmit} />
+		<Button text="Log in" onClick={handleSubmit} />
 	</div>
 </form>
 
@@ -33,7 +33,7 @@
 	}
 	.button-bar {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		margin-top: 18px;
 	}
 </style>

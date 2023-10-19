@@ -51,15 +51,15 @@ describe("Login Form", () => {
 		});
 	});
 
-	it("should display a 'Submit' button", () => {
+	it("should display a 'Log in' button", () => {
 		render(LoginForm, { onSubmit: vi.fn() });
 
-		const submitButton = screen.getByRole("button", { name: "Submit" });
+		const loginButton = screen.getByRole("button", { name: "Log in" });
 
-		expect(submitButton).toBeInTheDocument();
+		expect(loginButton).toBeInTheDocument();
 	});
 
-	it("should call 'onSubmit' with the form values when the 'Submit' button is clicked", async () => {
+	it("should call 'onSubmit' with the form values when the 'Log in' button is clicked", async () => {
 		const handleSubmitMock = vi.fn() as LoginFormProps["onSubmit"];
 
 		render(LoginForm, { onSubmit: handleSubmitMock });
@@ -70,8 +70,8 @@ describe("Login Form", () => {
 		await fireEvent.input(usernameInput, { target: { value: "Freddie" } });
 		await fireEvent.input(passwordInput, { target: { value: "Pa$sword123" } });
 
-		const submitButton = screen.getByRole("button", { name: "Submit" });
-		await fireEvent.click(submitButton);
+		const loginButton = screen.getByRole("button", { name: "Log in" });
+		await fireEvent.click(loginButton);
 
 		expect(handleSubmitMock).toHaveBeenCalledOnce();
 		expect(handleSubmitMock).toHaveBeenCalledWith({

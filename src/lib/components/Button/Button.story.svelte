@@ -8,7 +8,7 @@
 
 	let text: ButtonProps["text"] = "Submit";
 	let variant: ButtonProps["variant"] = "primary";
-	let size: ButtonProps["size"] = "medium";
+	let size: ButtonProps["size"] = "regular";
 </script>
 
 <div class="histoire-story">
@@ -32,7 +32,7 @@
 				this={Hst.Select}
 				title="size"
 				bind:value={size}
-				options={["small", "medium", "large"]}
+				options={["small", "regular", "wide"]}
 			/>
 		</svelte:fragment>
 	</svelte:component>

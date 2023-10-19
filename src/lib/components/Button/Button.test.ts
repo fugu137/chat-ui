@@ -52,7 +52,23 @@ describe("Button", () => {
 	});
 
 	describe("Sizes", () => {
-		it("should be small if the 'size' prop is set to 'small'", async () => {
+		it("should be regular sized if 'size' prop isn't set", async () => {
+			render(Button, { text: "Button text", onClick: vi.fn() });
+	
+			const button = screen.getByRole("button");
+	
+			expect(button).toHaveClass("regular");
+		});
+
+		it("should be regular sized if the 'size' prop is set to 'regular'", async () => {
+			render(Button, { text: "Button text", size: "regular", onClick: vi.fn() });
+	
+			const button = screen.getByRole("button");
+	
+			expect(button).toHaveClass("regular");
+		});
+	
+		it("should be small sized if the 'size' prop is set to 'small'", async () => {
 			render(Button, { text: "Button text", size: "small", onClick: vi.fn() });
 	
 			const button = screen.getByRole("button");
@@ -60,28 +76,12 @@ describe("Button", () => {
 			expect(button).toHaveClass("small");
 		});
 	
-		it("should be medium if the 'size' prop is set to 'medium'", async () => {
-			render(Button, { text: "Button text", size: "medium", onClick: vi.fn() });
+		it("should be wide if the 'size' prop is set to 'wide'", async () => {
+			render(Button, { text: "Button text", size: "wide", onClick: vi.fn() });
 	
 			const button = screen.getByRole("button");
 	
-			expect(button).toHaveClass("medium");
-		});
-
-		it("should be medium if 'size' prop isn't set", async () => {
-			render(Button, { text: "Button text", onClick: vi.fn() });
-	
-			const button = screen.getByRole("button");
-	
-			expect(button).toHaveClass("medium");
-		});
-	
-		it("should be large if the 'size' prop is set to 'large'", async () => {
-			render(Button, { text: "Button text", size: "large", onClick: vi.fn() });
-	
-			const button = screen.getByRole("button");
-	
-			expect(button).toHaveClass("large");
+			expect(button).toHaveClass("wide");
 		});
 	});
 });
