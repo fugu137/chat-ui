@@ -37,12 +37,6 @@
 </article>
 
 <style>
-	* {
-		--error-colour: red;
-		--font-size-small: 0.95em;
-		font-size: 1em;
-		box-shadow: none;
-	}
 	article {
 		display: flex;
 		flex-direction: column;
@@ -55,7 +49,7 @@
 	}
 	input {
 		display: block;
-		width: 440px;
+		max-width: var(--width-regular);
 		padding: 8px;
 		border-radius: 3px;
 		border: 1px solid grey;

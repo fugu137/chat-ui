@@ -13,12 +13,12 @@ describe("Input", () => {
 		expect(input).toHaveAccessibleName("A label");
 	});
 
-	it("should display user-entered text", () => {
+	it("should display user-entered text", async() => {
 		render(Input, { name: "1", type: "text", label: "A label", value: "" });
 
 		const input = screen.getByRole("textbox");
 
-		fireEvent.change(input, { target: { value: "abc123@email.com" } });
+		await fireEvent.input(input, { target: { value: "abc123@email.com" } });
 
 		expect(input).toHaveValue("abc123@email.com");
 	});

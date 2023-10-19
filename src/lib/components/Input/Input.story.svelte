@@ -1,17 +1,15 @@
 <script lang="ts">
 	import Input from "$lib/components/Input/Input.svelte";
 	import type { Hst } from "@histoire/plugin-svelte";
-	import type { ComponentProps } from "svelte";
+	import type { InputProps } from "./types";
 
 	export let Hst: Hst;
 
-	type Props = ComponentProps<Input>;
-
-	let name: Props["name"] = "input";
-	let label: Props["label"] = "Label:";
-	let type: Props["type"] = "text";
-	let value: Props["value"] = "First name";
-	let error: Props["error"];
+	let name: InputProps["name"] = "input";
+	let label: InputProps["label"] = "Label:";
+	let type: InputProps["type"] = "text";
+	let value: InputProps["value"] = "First name";
+	let error: InputProps["error"];
 </script>
 
 <div class="histoire-story">
