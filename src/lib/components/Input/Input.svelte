@@ -29,7 +29,7 @@
 	<div class="validation-area">
 		{#if error}
 			<div id="validation-content" role="alert">
-				<ValidationIcon color="red" width={22} height={22} />
+				<ValidationIcon color="var(--error-colour)" width={22} height={22} />
 				<span class="validation-message">{error}</span>
 			</div>
 		{/if}
