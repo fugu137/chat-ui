@@ -12,7 +12,7 @@
 </script>
 
 <div class="histoire-story">
-	<svelte:component this={Hst.Story} title="Login Form">
+	<svelte:component this={Hst.Story} title="Login Form/Login Form">
 		<LoginForm
 			error={error}
 			buttonSize={buttonSize}
@@ -21,7 +21,6 @@
 		/>
 
 		<svelte:fragment slot="controls">
-			<svelte:component this={Hst.Text} title="error" bind:value={error} />
 			<svelte:component
 				this={Hst.Select}
 				title="buttonVariant"
@@ -34,6 +33,7 @@
 				bind:value={buttonSize}
 				options={["small", "regular", "wide"]}
 			/>
+			<svelte:component this={Hst.Text} title="error" bind:value={error} />
 		</svelte:fragment>
 	</svelte:component>
 </div>

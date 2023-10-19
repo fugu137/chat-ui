@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ValidationBar from "../ValidationBar/ValidationBar.svelte";
+	import ValidationArea from "../ValidationArea/ValidationArea.svelte";
 
 	export let name: string;
 	export let type: "text" | "password";
@@ -26,7 +26,7 @@
 		aria-errormessage="validation-message"
 	/>
 
-	<ValidationBar ariaId="validation-message" error={error} />
+	<ValidationArea ariaId="validation-message" error={error} />
 </article>
 
 <style>

@@ -1,10 +1,8 @@
 import { render, screen } from "@testing-library/svelte";
 import { describe, it, expect } from "vitest";
-import ValidationBar from "./ValidationBar.svelte";
+import ValidationBar from "./ValidationArea.svelte";
 
 describe("Validation Bar", () => {
-    
-
 	it("should display an error message if an error is passed in", () => {
 		render(ValidationBar, { ariaId: "id", error: "Error message to display" });
 

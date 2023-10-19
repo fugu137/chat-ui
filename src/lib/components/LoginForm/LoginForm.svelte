@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Button from "../Button/Button.svelte";
+	import FormSubmit from "../FormSubmit/FormSubmit.svelte";
 	import type { ButtonSize, ButtonVariant } from "../Button/types";
 	import Input from "../Input/Input.svelte";
-	import ValidationBar from "../ValidationBar/ValidationBar.svelte";
 	import type { LoginFormValues } from "./types";
 
 	export let onSubmit: (formValues: LoginFormValues) => void;
@@ -28,27 +27,17 @@
 	<Input name="username" label="Username" type="text" bind:value={username} />
 	<Input name="password" label="Password" type="password" bind:value={password} />
 
-	<div class="button-bar">
-		<ValidationBar ariaId="validation-message" error={error} />
-		<Button
-			text="Log in"
-			onClick={handleSubmit}
-			size={buttonSize}
-			variant={buttonVariant}
-		/>
-	</div>
+	<FormSubmit
+		buttonText="Log in"
+		buttonSize={buttonSize}
+		buttonVariant={buttonVariant}
+		onButtonClick={handleSubmit}
+		error={error}
+	/>
 </form>
 
 <style>
 	form {
 		width: var(--width-regular);
-	}
-	.button-bar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		column-gap: 16px;
-		width: 100%;
-		margin-top: 18px;
 	}
 </style>

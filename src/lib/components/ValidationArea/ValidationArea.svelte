@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ValidationIcon from "../Icon/ValidationIcon.svelte";
+	import ValidationIcon from "../icons/ValidationIcon.svelte";
 
 	export let ariaId: string;
 	export let error: string | undefined = undefined;
