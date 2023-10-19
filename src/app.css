@@ -6,10 +6,17 @@
 	--font-size-medium: 1em;
 	--font-size-small: 0.95em;
 	--font-size-xsmall: 0.85em;
-	--primary-colour: #1c71d8;
-	--secondary-colour: #d81c71;
+
+	--primary-colour-light: hsla(213, 77%, 48%, 100%);
+	--primary-colour: hsla(213, 77%, 48%, 90%);
+	--primary-colour-dark: hsla(213, 77%, 48%, 80%);
+	--secondary-colour-light: hsl(333, 77%, 48%, 100%);
+	--secondary-colour: hsla(333, 77%, 48%, 90%);
+	--secondary-colour-dark: hsl(333, 77%, 48%, 80%);
 	--error-colour: red;
+
 	--width-regular: 440px;
+	
 	font-size: var(--font-size-medium);
 	box-sizing: border-box;
 	box-shadow: none;

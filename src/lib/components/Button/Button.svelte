@@ -13,6 +13,9 @@
 
 <style>
     button {
+        color: black;
+        background-color: transparent;
+        border: 1px solid black;
         font-size: var(--font-size-small);
         border-radius: 3px;
         padding: 8px 16px;
@@ -28,18 +31,23 @@
     button.primary {
         color: white;
         background-color: var(--primary-colour);
-        border: 1px solid var(--primary-colour);
+        border: 2px solid var(--primary-colour);
+    }
+    button.primary:hover {
+        background-color: var(--primary-colour-light);
+    }
+    button.primary:active {
+        background-color: var(--primary-colour-dark);
     }
     button.secondary {
         color: white;
         background-color: var(--secondary-colour);
-        border: 1px solid var(--secondary-colour);
+        border: 2px solid var(--secondary-colour);
     }
-    button:hover {
-        opacity: 0.9;
+    button.secondary:hover {
+        background-color: var(--secondary-colour-light);
     }
-    button:active {
-        opacity: 1;
-        filter: brightness(95%);
+    button.secondary:active {
+        background-color: var(--secondary-colour-dark);
     }
 </style>
