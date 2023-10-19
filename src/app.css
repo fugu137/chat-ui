@@ -3,7 +3,17 @@
 }
 
 * {
+	--font-size-medium: 1em;
+	--font-size-small: 0.95em;
+	--font-size-xsmall: 0.85em;
+	--primary-colour: #1c71d8;
+	--secondary-colour: #d81c71;
+	--error-colour: red;
+	--width-regular: 440px;
+	font-size: var(--font-size-medium);
 	box-sizing: border-box;
+	box-shadow: none;
+	outline: none;
 	margin: 0;
 	padding: 0;
 }
