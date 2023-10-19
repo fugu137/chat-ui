@@ -24,6 +24,8 @@
 
 	<div class="button-bar">
 		<Button text="Log in" onClick={handleSubmit} />
+		<div class="validation-area">
+		</div>
 	</div>
 </form>
 
@@ -34,6 +36,10 @@
 	.button-bar {
 		display: flex;
 		justify-content: flex-start;
+		column-gap: 16px;
 		margin-top: 18px;
+	}
+	.validation-area {
+		height: 22px;
 	}
 </style>

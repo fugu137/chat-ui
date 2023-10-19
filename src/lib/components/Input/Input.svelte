@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ValidationIcon from "$lib/components/Icon/ValidationIcon.svelte";
+	import ValidationBar from "../ValidationBar/ValidationBar.svelte";
 
 	export let name: string;
 	export let type: "text" | "password";
@@ -23,17 +23,10 @@
 		value={value}
 		on:input={handleInput}
 		aria-invalid={!!error}
-		aria-errormessage="validation-content"
+		aria-errormessage="validation-message"
 	/>
 
-	<div class="validation-area">
-		{#if error}
-			<div id="validation-content" role="alert">
-				<ValidationIcon color="var(--error-colour)" width={22} height={22} />
-				<span class="validation-message">{error}</span>
-			</div>
-		{/if}
-	</div>
+	<ValidationBar id="validation-message" error={error} />
 </article>
 
 <style>
@@ -56,18 +49,5 @@
 	}
 	input.error {
 		border-color: var(--error-colour);
-	}
-	.validation-area {
-		height: 22px;
-	}
-	#validation-content {
-		display: flex;
-		align-items: center;
-		column-gap: 4px;
-	}
-	.validation-message {
-		color: var(--error-colour);
-		font-size: var(--font-size-small);
-		line-height: var(--font-size-small);
 	}
 </style>
